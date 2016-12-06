@@ -1,5 +1,8 @@
 iOS Workbook
 ====
 
-### Versioning
-[git cheat sheet](git-cheats.md)
+### Cheat Sheets
+
+[Terminal Commands](terminal-commands.md)
+
+[git Commands](git-cheats.md)
