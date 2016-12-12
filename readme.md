@@ -1,8 +1,11 @@
 iOS Workbook
 ====
 
-### Cheat Sheets
+## Cheat Sheets
 
-[Terminal Commands](terminal-commands.md)
+- [Terminal Commands](terminal-commands.md)
+- [git Commands](git-cheats.md)
 
-[git Commands](git-cheats.md)
+## Chapters
+- [View Layouts](view_layout)
+
