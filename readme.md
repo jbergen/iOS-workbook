@@ -8,4 +8,4 @@ iOS Workbook
 
 ## Chapters
 - [View Layouts](view_layout)
-
+- [Subclassing](subclassing)
