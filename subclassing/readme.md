@@ -11,7 +11,10 @@ Subclassing your own custom classes is by far the easiest to understand. This is
 
 Subclassing someone else's classes is really not that difficult, but various requirements may make it slightly more tricky. You must be aware that overriding an init or providing a convenience initializer can cause issues if there is a designated initializer in the parent class. You may need to look at the class or its documentation to see exactly what is required.
 
-## Playground
+## Playgrounds
 
 Check out the subclassing playground to see how classes and subclasses work in practice.
+
+- subclassing.playground
+- subclassing-uikit.playground
 
