@@ -12,7 +12,7 @@ This type of filter is the probably the most simple and can be read pretty easil
  
 Basically, the loop looks at every item in the array and then loops through every category within the `categories` array to compare it with the `categoryFilter` value. These sorts of nested loops are very useful but can quickly get difficult to read. In this case it's not bad, but try not to go further than two nested loops deep for your sanity.
 
-```
+```swift
 func nestedLoopFilter(array: [Post], categoryFilter: Int) -> [Post] {
 
     // define a results array before and outside the initial loop. We only want to initialize this once per filter
@@ -42,7 +42,7 @@ This method performs the same function as the Nested Loops above, but with a (so
  
 see: https://developer.apple.com/reference/swift/array/1689783-foreach
  
- ```
+ ```swift
 func forEachLoopFilter(array: [Post], categoryFilter: Int) -> [Post] {
 
     // again, we must define our results array before the loop begins
@@ -74,7 +74,7 @@ In this example I take advantage of a special kind of array called Set. A set is
  
 see: https://developer.apple.com/reference/swift/set
 
-```
+```swift
 func flatMapFilter(array: [Post], categoryFilter: Int) -> [Post] {
 
     // Creating the flat map and setting it to the results array
@@ -108,7 +108,7 @@ Here I do flatmap, but in one line. Take your time and unpack all the things hap
  - Ternary operator to determine whether to pass the post ($0) or not (nil). Ternary is expressed as `var value = Bool ? trueValue : falseValue` See: https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#//apple_ref/doc/uid/TP40014097-CH6-ID71
  - returning the post on the first line without first assigning to a variable
 
-```
+```swift
 func smallFlatMapFilter(array: [Post], categoryFilter: Int) -> [Post] {
     return array.flatMap { return Set($0.categories).contains(categoryFilter) ? $0 : nil }
 }
@@ -118,7 +118,7 @@ func smallFlatMapFilter(array: [Post], categoryFilter: Int) -> [Post] {
 
 This version uses the `filter` function which takes a function that is called for every element in the array and has to return a Bool depending on whether or not the element should be part of the final array or not.
 
-```
+```swift
 func arrayFilter(array: [Post], categoryFilter: Int) -> [Post] {
     return array.filter {
         for catId in $0.categories {
@@ -136,7 +136,7 @@ func arrayFilter(array: [Post], categoryFilter: Int) -> [Post] {
  
 This version is similar to the previous filter, but condensed down to a single line. Note how since the `contains` function returns a Bool the code becomes very simple and is actually pretty readable.
 
-```
+```swift
 func smallArrayFilter(array: [Post], categoryFilter: Int) -> [Post] {
     return array.filter { Set($0.categories).contains(categoryFilter) }
 }
